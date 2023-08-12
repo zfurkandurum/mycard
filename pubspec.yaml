@@ -1,0 +1,46 @@
+name: mycard
+description: A new Flutter project.
+publish_to: 'none'
+version: 0.1.0
+
+environment:
+  sdk: '>=3.0.5 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+ 
+  #animations
+  lottie: ^2.4.0
+  #very_good_analysis
+  #scan
+  #permission_handler: ^10.3.0
+  #document_scanner: ^0.2.1
+  #url_launcher
+  url_launcher: ^6.1.11
+  #finger print
+  local_auth: ^2.1.6
+  #cache
+  hive: ^2.2.3
+  hive_flutter: ^1.1.0
+  sqflite: ^2.2.8+4
+  #shared_preferences: ^2.1.1
+  overlay_support: ^2.1.0
+
+  #ads
+  #google_mobile_ads: ^3.0.0
+
+  very_good_analysis: ^5.0.0+1
+  #cupertino_icons: ^1.0.2 
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0
+
+flutter:
+  uses-material-design: true
+  assets:
+  - assets/lottie/
+  - assets/png/
