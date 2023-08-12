@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:mycard/Utils/color.dart';
-import 'package:mycard/Utils/sizedBox.dart';
 import 'package:mycard/future/addCard_manual.dart';
 
 class cardDetailView extends StatefulWidget {
@@ -21,9 +20,13 @@ class _inCardViewState extends State<cardDetailView> {
       appBar: inCardAppBar(),
       body: const Column(
         children: [
-          largeHeightSizedBox(),
+          SizedBox(
+            height: 20,
+          ),
           CardView(),
-          normalHeightSizedBox(),
+          SizedBox(
+            height: 10,
+          ),
           detailCard()
         ],
       ),
@@ -68,11 +71,17 @@ class CardView extends StatelessWidget {
           child: Column(
             children: [
               CardViewTag(),
-              normalWidthSizedBox(),
+              SizedBox(
+                height: 10,
+              ),
               CardViewNumber(),
-              normalWidthSizedBox(),
+              SizedBox(
+                height: 10,
+              ),
               CardViewDate(),
-              normalWidthSizedBox(),
+              SizedBox(
+                height: 10,
+              ),
               CardViewName(),
             ],
           ),

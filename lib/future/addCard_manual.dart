@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:mycard/Utils/color.dart';
-import 'package:mycard/Utils/sizedBox.dart';
 import 'package:mycard/Utils/sizes.dart';
 import 'package:mycard/Utils/text.dart';
 import 'package:mycard/widget/colorPickerPanel.dart';
@@ -34,17 +33,25 @@ class _addCardManualState extends State<addCardManual> {
               child: Column(
                 children: [
                   CardName(),
-                  normalWidthSizedBox(),
+                  SizedBox(
+                    height: 10,
+                  ),
                   CardNumber(),
-                  normalWidthSizedBox(),
+                  SizedBox(
+                    height: 10,
+                  ),
                   FullName(),
-                  normalWidthSizedBox(),
+                  SizedBox(
+                    height: 10,
+                  ),
                   Row(
                     children: [
                       Expanded(
                         child: CardCVV(),
                       ),
-                      normalWidthSizedBox(),
+                      SizedBox(
+                        height: 10,
+                      ),
                       Expanded(
                         child: CardDate(),
                       ),
