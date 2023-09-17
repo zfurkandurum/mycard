@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:mycard/Utils/color.dart';
 import 'package:mycard/Utils/text.dart';
-import 'package:mycard/future/aboutPage.dart';
-import 'package:mycard/future/splashPage.dart';
+import 'package:mycard/Screen/aboutPage.dart';
+import 'package:mycard/Screen/splashPage.dart';
 
 class DrawerWidget extends StatefulWidget {
   const DrawerWidget({super.key});

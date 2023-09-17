@@ -1,8 +1,8 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 
 import 'package:flutter/material.dart';
-import 'package:mycard/Product/data.dart';
-import 'package:mycard/future/CardDetail.dart';
+import 'package:mycard/Models/data.dart';
+import 'package:mycard/Screen/CardDetail.dart';
 
 class NewCardView extends StatefulWidget {
   const NewCardView({

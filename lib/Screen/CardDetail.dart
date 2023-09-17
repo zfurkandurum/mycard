@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mycard/Utils/color.dart';
-import 'package:mycard/future/addCard.dart';
+import 'package:mycard/Screen/addCard.dart';
 
 class cardDetailView extends StatefulWidget {
   const cardDetailView({super.key});

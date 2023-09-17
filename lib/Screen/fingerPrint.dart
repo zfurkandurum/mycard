@@ -22,9 +22,11 @@ class _FingerPrintScreenState extends State<FingerPrintScreen> {
   void initState() {
     super.initState();
     auth.isDeviceSupported().then(
-          (bool isSupported) => setState(() => _supportState = isSupported
-              ? _SupportState.supported
-              : _SupportState.unsupported),
+          (bool isSupported) => setState(
+            () => _supportState = isSupported
+                ? _SupportState.supported
+                : _SupportState.unsupported,
+          ),
         );
   }
 
@@ -63,7 +65,7 @@ class _FingerPrintScreenState extends State<FingerPrintScreen> {
   }
 
   Future<void> _authenticate() async {
-    bool authenticated = false;
+    var authenticated = false;
     try {
       setState(() {
         _isAuthenticating = true;
@@ -91,11 +93,12 @@ class _FingerPrintScreenState extends State<FingerPrintScreen> {
     }
 
     setState(
-        () => _authorized = authenticated ? 'Authorized' : 'Not Authorized');
+      () => _authorized = authenticated ? 'Authorized' : 'Not Authorized',
+    );
   }
 
   Future<void> _authenticateWithBiometrics() async {
-    bool authenticated = false;
+    var authenticated = false;
     try {
       setState(() {
         _isAuthenticating = true;
@@ -125,7 +128,7 @@ class _FingerPrintScreenState extends State<FingerPrintScreen> {
       return;
     }
 
-    final String message = authenticated ? 'Authorized' : 'Not Authorized';
+    final message = authenticated ? 'Authorized' : 'Not Authorized';
     setState(() {
       _authorized = message;
     });
@@ -202,9 +205,11 @@ class _FingerPrintScreenState extends State<FingerPrintScreen> {
                         child: Row(
                           mainAxisSize: MainAxisSize.min,
                           children: <Widget>[
-                            Text(_isAuthenticating
-                                ? 'Cancel'
-                                : 'Authenticate: biometrics only'),
+                            Text(
+                              _isAuthenticating
+                                  ? 'Cancel'
+                                  : 'Authenticate: biometrics only',
+                            ),
                             const Icon(Icons.fingerprint),
                           ],
                         ),

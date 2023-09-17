@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:mycard/Utils/color.dart';
 import 'package:mycard/Utils/text.dart';
-import 'package:mycard/future/Drawer.dart';
-import 'package:mycard/future/addCard.dart';
-import 'package:mycard/future/new_card_view.dart';
+import 'package:mycard/Screen/Drawer.dart';
+import 'package:mycard/Screen/addCard.dart';
+import 'package:mycard/Screen/new_card_view.dart';
 
 class homePage extends StatefulWidget {
   const homePage({super.key});

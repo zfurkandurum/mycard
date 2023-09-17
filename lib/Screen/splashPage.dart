@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
-import 'package:mycard/future/homePage.dart';
+import 'package:mycard/Screen/homePage.dart';
 
 class splashPage extends StatefulWidget {
   const splashPage({super.key});
