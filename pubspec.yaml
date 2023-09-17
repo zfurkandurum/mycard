@@ -27,7 +27,8 @@ dependencies:
   sqflite: ^2.2.8+4
   #shared_preferences: ^2.1.1
   overlay_support: ^2.1.0
-
+  #image
+  flutter_svg: ^2.0.7
   #ads
   #google_mobile_ads: ^3.0.0
 
@@ -44,3 +45,4 @@ flutter:
   assets:
   - assets/lottie/
   - assets/png/
+  - assets/svg/

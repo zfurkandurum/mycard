@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mycard/Utils/color.dart';
-import 'package:mycard/future/addCard_manual.dart';
+import 'package:mycard/future/addCard.dart';
 
 class cardDetailView extends StatefulWidget {
   const cardDetailView({super.key});
@@ -27,7 +27,7 @@ class _inCardViewState extends State<cardDetailView> {
           SizedBox(
             height: 10,
           ),
-          detailCard()
+          detailCard(),
         ],
       ),
     );
@@ -227,7 +227,7 @@ class FullNameListTile extends StatelessWidget {
               onPressed: () {
                 showSuccessSnackbar(context, 'copied!');
               },
-            )
+            ),
           ],
         ),
       ),
@@ -266,7 +266,7 @@ class NumberListTile extends StatelessWidget {
               onPressed: () {
                 showSuccessSnackbar(context, 'copied!');
               },
-            )
+            ),
           ],
         ),
       ),

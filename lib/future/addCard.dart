@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:mycard/Utils/color.dart';
 import 'package:mycard/Utils/sizes.dart';
 import 'package:mycard/Utils/text.dart';
@@ -17,52 +18,64 @@ class addCardManual extends StatefulWidget {
 class _addCardManualState extends State<addCardManual> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text(ProjectText().addCardManualAppBar),
-        backgroundColor: projectColor.green,
-        actions: [
-          IconButton(onPressed: () {}, icon: const Icon(Icons.fit_screen_sharp))
-        ],
-      ),
-      body: const Padding(
-        padding: EdgeInsets.all(10),
-        child: Column(
-          children: [
-            Form(
-              child: Column(
-                children: [
-                  CardName(),
-                  SizedBox(
-                    height: 10,
-                  ),
-                  CardNumber(),
-                  SizedBox(
-                    height: 10,
-                  ),
-                  FullName(),
-                  SizedBox(
-                    height: 10,
-                  ),
-                  Row(
-                    children: [
-                      Expanded(
-                        child: CardCVV(),
-                      ),
-                      SizedBox(
-                        height: 10,
-                      ),
-                      Expanded(
-                        child: CardDate(),
-                      ),
-                    ],
-                  ),
-                ],
+    return SafeArea(
+      child: Scaffold(
+        appBar: AppBar(
+          title: Text(ProjectText().addCardManualAppBar),
+          backgroundColor: projectColor.green,
+          actions: [
+            IconButton(
+              onPressed: () {},
+              icon: const Icon(Icons.fit_screen_sharp),
+            ),
+            IconButton(
+              onPressed: () {},
+              icon: SvgPicture.asset(
+                'assets/svg/NFC-Icon.svg',
+                color: Colors.white,
               ),
             ),
-            ColorPicker(),
-            SizedBox(height: 50, width: 400, child: CardAddButton()),
           ],
+        ),
+        body: const Padding(
+          padding: EdgeInsets.all(10),
+          child: Column(
+            children: [
+              Form(
+                child: Column(
+                  children: [
+                    CardName(),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    CardNumber(),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    FullName(),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    Row(
+                      children: [
+                        Expanded(
+                          child: CardCVV(),
+                        ),
+                        SizedBox(
+                          height: 10,
+                        ),
+                        Expanded(
+                          child: CardDate(),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+              ),
+              ColorPicker(),
+              SizedBox(height: 50, width: 400, child: CardAddButton()),
+            ],
+          ),
         ),
       ),
     );

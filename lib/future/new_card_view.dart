@@ -14,7 +14,7 @@ class NewCardView extends StatefulWidget {
 }
 
 class _NewCardViewState extends State<NewCardView> {
-  Future<void> loadData() async {
+  /* Future<void> loadData() async {
     if (dataListString.isNotEmpty) {
       final dataStrings = dataListString.split(';');
       final loadedDataList = <Data>[];
@@ -46,7 +46,7 @@ class _NewCardViewState extends State<NewCardView> {
       });
     }
   }
-
+*/
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
