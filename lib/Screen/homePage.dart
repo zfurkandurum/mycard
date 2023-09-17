@@ -3,7 +3,7 @@ import 'package:mycard/Utils/color.dart';
 import 'package:mycard/Utils/text.dart';
 import 'package:mycard/Screen/Drawer.dart';
 import 'package:mycard/Screen/addCard.dart';
-import 'package:mycard/Screen/new_card_view.dart';
+import 'package:mycard/widget/new_card_view.dart';
 
 class homePage extends StatefulWidget {
   const homePage({super.key});
@@ -29,8 +29,9 @@ class _homePageState extends State<homePage> {
         ],
       ),
       body: ListView.builder(
+        itemCount: 3,
         itemBuilder: (context, index) {
-          return null;
+          return const NewCardView();
         },
       ),
       drawer: const DrawerWidget(),
