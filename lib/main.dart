@@ -36,8 +36,8 @@ class _MainAppState extends State<MainApp> {
   Widget build(BuildContext context) {
     return MaterialApp(
       localizationsDelegates: context.localizationDelegates,
-      supportedLocales: context.supportedLocales,
       locale: context.locale,
+      supportedLocales: context.supportedLocales,
       title: 'MyCard',
       debugShowCheckedModeBanner: false,
       theme: ThemeData.light(),
