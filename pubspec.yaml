@@ -31,6 +31,9 @@ dependencies:
   flutter_svg: ^2.0.7
   #ads
   #google_mobile_ads: ^3.0.0
+  #Localization
+  easy_localization: ^3.0.3
+  easy_localization_loader: ^1.0.1+1
 
   very_good_analysis: ^5.0.0+1
   #cupertino_icons: ^1.0.2 
@@ -46,3 +49,5 @@ flutter:
   - assets/lottie/
   - assets/png/
   - assets/svg/
+  - assets/lang/
+

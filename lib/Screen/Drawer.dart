@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:mycard/Utils/color.dart';
-import 'package:mycard/Utils/text.dart';
+import 'package:mycard/Utils/constants.dart';
 import 'package:mycard/Screen/aboutPage.dart';
 import 'package:mycard/Screen/splashPage.dart';
+import 'package:mycard/Utils/extension/string_extension.dart';
+import 'package:mycard/Utils/locale_keys.g.dart';
 
 class DrawerWidget extends StatefulWidget {
   const DrawerWidget({super.key});
@@ -51,7 +53,7 @@ class removeAdsButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListTile(
       leading: const Icon(Icons.attach_money_outlined),
-      title: Text(ProjectText().removeAds),
+      title: const Text('Localization hata'),
       onTap: () {
         //ilk sürümde olmaya bilir
         //ilgili sayfaya yönledirme var
@@ -70,7 +72,7 @@ class languageButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListTile(
       leading: const Icon(Icons.language_outlined),
-      title: Text(ProjectText().language),
+      title: const Text('Localization hata'),
       onTap: () {
         //sayfa çısılsın burada dil seçenekleri olacak
       },
@@ -87,7 +89,7 @@ class biometricsButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListTile(
       leading: const Icon(Icons.fingerprint_outlined),
-      title: Text(ProjectText().biometrics),
+      title: const Text('Localization hata'),
       onTap: () {
         //burada alert şeklinde uyarı cıkacak çıkan uyarıda ilgili yazılar parmak izi resmi ve bir disable butonu olacak
         //parmak izi telefonun kendi parmak izini alacak
@@ -106,7 +108,7 @@ class themeButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListTile(
       leading: const Icon(Icons.lightbulb),
-      title: Text(ProjectText().themeMod),
+      title: const Text('Localization hata'),
       onTap: () {
         //burada lottie ile animasyon şeklinde buton olacak dark/litgh
         //?????
@@ -124,7 +126,7 @@ class aboutButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListTile(
       leading: const Icon(Icons.info_outline_rounded),
-      title: Text(ProjectText().about),
+      title: const Text('Localization hata'),
       onTap: () {
         Navigator.push(
           context,
@@ -145,7 +147,7 @@ class donateButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListTile(
       leading: const Icon(Icons.monetization_on_outlined),
-      title: Text(ProjectText().donate),
+      title: const Text(LocaleKeys.drawer_donate),
       onTap: () {
         Navigator.push(
           context,

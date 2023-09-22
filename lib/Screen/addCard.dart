@@ -3,7 +3,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:mycard/Utils/color.dart';
 import 'package:mycard/Utils/sizes.dart';
-import 'package:mycard/Utils/text.dart';
+import 'package:mycard/Utils/constants.dart';
 import 'package:mycard/widget/colorPickerPanel.dart';
 
 class addCardManual extends StatefulWidget {
@@ -21,7 +21,7 @@ class _addCardManualState extends State<addCardManual> {
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
-          title: Text(ProjectText().addCardManualAppBar),
+          title: const Text('Localization hata'),
           backgroundColor: projectColor.green,
           actions: [
             IconButton(
@@ -92,7 +92,7 @@ class CardAddButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return ElevatedButton(
       onPressed: () {
-        showSuccessSnackbar(context, ProjectText().successSnackBar);
+        showSuccessSnackbar(context, 'Localization hata');
         //ScaffoldMessenger.of(context).showSnackBar(snackBar);
 
         Navigator.pop(context);

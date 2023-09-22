@@ -1,13 +1,24 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 import 'package:mycard/Screen/splashPage.dart';
+import 'package:mycard/Utils/Utils.dart';
 
-void main() {
-  runApp(const MainApp());
+Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  await EasyLocalization.ensureInitialized();
+  runApp(
+    EasyLocalization(
+      supportedLocales: const [
+        ProjectText.EN_LOCALE,
+      ],
+      path: ProjectText.LANG_PATH,
+      child: const MainApp(),
+    ),
+  );
 
-  SystemChrome.setPreferredOrientations([
+  await SystemChrome.setPreferredOrientations([
     DeviceOrientation.portraitUp,
     DeviceOrientation.portraitDown,
   ]);
@@ -24,6 +35,9 @@ class _MainAppState extends State<MainApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      localizationsDelegates: context.localizationDelegates,
+      supportedLocales: context.supportedLocales,
+      locale: context.locale,
       title: 'MyCard',
       debugShowCheckedModeBanner: false,
       theme: ThemeData.light(),

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:hive/hive.dart';
 import 'package:mycard/Utils/color.dart';
-import 'package:mycard/Utils/text.dart';
+import 'package:mycard/Utils/constants.dart';
 import 'package:mycard/Screen/Drawer.dart';
 import 'package:mycard/Screen/addCard.dart';
 import 'package:mycard/widget/new_card_view.dart';
