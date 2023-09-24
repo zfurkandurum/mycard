@@ -4,7 +4,8 @@ import 'package:mycard/Utils/constants.dart';
 import 'package:mycard/Screen/aboutPage.dart';
 import 'package:mycard/Screen/splashPage.dart';
 import 'package:mycard/Utils/extension/string_extension.dart';
-import 'package:mycard/Utils/locale_keys.g.dart';
+
+import 'package:mycard/core/lang/locale_keys.g.dart';
 
 class DrawerWidget extends StatefulWidget {
   const DrawerWidget({super.key});
@@ -72,7 +73,7 @@ class languageButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListTile(
       leading: const Icon(Icons.language_outlined),
-      title: const Text('Localization hata'),
+      title: Text(LocaleKeys.drawer_language.locale),
       onTap: () {
         //sayfa çısılsın burada dil seçenekleri olacak
       },
@@ -89,7 +90,7 @@ class biometricsButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListTile(
       leading: const Icon(Icons.fingerprint_outlined),
-      title: const Text('Localization hata'),
+      title: Text(LocaleKeys.drawer_fingerprint.locale),
       onTap: () {
         //burada alert şeklinde uyarı cıkacak çıkan uyarıda ilgili yazılar parmak izi resmi ve bir disable butonu olacak
         //parmak izi telefonun kendi parmak izini alacak
@@ -126,7 +127,7 @@ class aboutButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListTile(
       leading: const Icon(Icons.info_outline_rounded),
-      title: const Text('Localization hata'),
+      title: Text(LocaleKeys.drawer_info.locale),
       onTap: () {
         Navigator.push(
           context,
@@ -147,7 +148,7 @@ class donateButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListTile(
       leading: const Icon(Icons.monetization_on_outlined),
-      title: const Text(LocaleKeys.drawer_donate),
+      title: Text(LocaleKeys.drawer_donate.locale),
       onTap: () {
         Navigator.push(
           context,

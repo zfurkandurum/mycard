@@ -21,21 +21,23 @@ class _homePageState extends State<homePage> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        backgroundColor: projectColor.green,
-        title: Center(child: Text(ProjectText().appName)),
-        actions: const [
-          homePageAddIcon(),
-        ],
+    return SafeArea(
+      child: Scaffold(
+        appBar: AppBar(
+          backgroundColor: projectColor.green,
+          title: Center(child: Text(ProjectText().appName)),
+          actions: const [
+            homePageAddIcon(),
+          ],
+        ),
+        body: ListView.builder(
+          itemCount: 3,
+          itemBuilder: (context, index) {
+            return const NewCardView();
+          },
+        ),
+        drawer: const DrawerWidget(),
       ),
-      body: ListView.builder(
-        itemCount: 3,
-        itemBuilder: (context, index) {
-          return const NewCardView();
-        },
-      ),
-      drawer: const DrawerWidget(),
     );
   }
 }

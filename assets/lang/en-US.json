@@ -1,6 +1,9 @@
 {
     "drawer":{
-        "donate": "Donate"
+        "donate": "Donate",
+        "info":"Info",
+        "fingerprint":"Fingerprint",
+        "language":"Language"
     }
 
 }
