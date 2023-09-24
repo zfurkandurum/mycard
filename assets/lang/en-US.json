@@ -4,6 +4,19 @@
         "info":"Info",
         "fingerprint":"Fingerprint",
         "language":"Language"
+    },
+    "addCard":{
+       "cardName":"Card Name",
+       "fullName":"Full Name",
+       "CVV":"CVV",
+       "MMYY":"MM/YY",
+       "appBarText":"New Card",
+       "addCardButton":"Add Card"
+    },
+    "general":{
+        "successSnackBar":"Completed!"
+
     }
+
 
 }

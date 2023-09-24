@@ -1,0 +1,22 @@
+{
+    "drawer":{
+        "donate": "Bağış yap",
+        "info":"Bilgi",
+        "fingerprint":"Parmak izi",
+        "language":"Dil"
+    },
+    "addCard":{
+       "cardName":"Kart Adı",
+       "fullName":"Ad Soyad",
+       "CVV":"CVV",
+       "MMYY":"AA/YY",
+       "appBarText":"Yeni Kart",
+       "addCardButton":"Kart Ekle"
+    },
+    "general":{
+        "successSnackBar":"Başarılı!"
+
+    }
+
+
+}

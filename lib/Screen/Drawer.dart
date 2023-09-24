@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mycard/Screen/language_change_page.dart';
 import 'package:mycard/Utils/color.dart';
 import 'package:mycard/Utils/constants.dart';
 import 'package:mycard/Screen/aboutPage.dart';
@@ -75,6 +76,11 @@ class languageButton extends StatelessWidget {
       leading: const Icon(Icons.language_outlined),
       title: Text(LocaleKeys.drawer_language.locale),
       onTap: () {
+        Navigator.of(context).push(
+          MaterialPageRoute(
+            builder: (context) => const LanguageChangePage(),
+          ),
+        );
         //sayfa çısılsın burada dil seçenekleri olacak
       },
     );

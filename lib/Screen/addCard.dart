@@ -2,8 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:mycard/Utils/color.dart';
+import 'package:mycard/Utils/extension/string_extension.dart';
 import 'package:mycard/Utils/sizes.dart';
 import 'package:mycard/Utils/constants.dart';
+import 'package:mycard/core/lang/locale_keys.g.dart';
 import 'package:mycard/widget/colorPickerPanel.dart';
 
 class addCardManual extends StatefulWidget {
@@ -21,21 +23,22 @@ class _addCardManualState extends State<addCardManual> {
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
-          title: const Text('Localization hata'),
+          title: Text(LocaleKeys.addCard_appBarText.locale),
+          centerTitle: true,
           backgroundColor: projectColor.green,
-          actions: [
-            IconButton(
-              onPressed: () {},
-              icon: const Icon(Icons.fit_screen_sharp),
-            ),
-            IconButton(
-              onPressed: () {},
-              icon: SvgPicture.asset(
-                'assets/svg/NFC-Icon.svg',
-                color: Colors.white,
-              ),
-            ),
-          ],
+          // actions: [
+          //   IconButton(
+          //     onPressed: () {},
+          //     icon: const Icon(Icons.fit_screen_sharp),
+          //   ),
+          //   IconButton(
+          //     onPressed: () {},
+          //     icon: SvgPicture.asset(
+          //       'assets/svg/NFC-Icon.svg',
+          //       color: Colors.white,
+          //     ),
+          //   ),
+          // ],
         ),
         body: const Padding(
           padding: EdgeInsets.all(10),
@@ -73,7 +76,11 @@ class _addCardManualState extends State<addCardManual> {
                 ),
               ),
               ColorPicker(),
-              SizedBox(height: 50, width: 400, child: CardAddButton()),
+              SizedBox(
+                height: 50,
+                width: 400,
+                child: CardAddButton(),
+              ),
             ],
           ),
         ),
@@ -92,7 +99,10 @@ class CardAddButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return ElevatedButton(
       onPressed: () {
-        showSuccessSnackbar(context, 'Localization hata');
+        showSuccessSnackbar(
+          context,
+          LocaleKeys.general_successSnackBar.locale,
+        );
         //ScaffoldMessenger.of(context).showSnackBar(snackBar);
 
         Navigator.pop(context);
@@ -105,7 +115,7 @@ class CardAddButton extends StatelessWidget {
         ),
         backgroundColor: projectColor.green,
       ),
-      child: const Text('Add Card'),
+      child: Text(LocaleKeys.addCard_addCardButton.locale),
     );
   }
 }
@@ -143,7 +153,7 @@ class CardDate extends StatelessWidget {
           borderSide: BorderSide(color: projectColor.green),
         ),
         prefixIconColor: projectColor.green,
-        hintText: 'MM/YY',
+        hintText: LocaleKeys.addCard_MMYY.locale,
         prefixIcon: const Padding(
           padding: EdgeInsets.symmetric(vertical: 10),
           child: Icon(Icons.calendar_month_outlined),
@@ -172,7 +182,7 @@ class CardCVV extends StatelessWidget {
           borderSide: BorderSide(color: projectColor.green),
         ),
         prefixIconColor: projectColor.green,
-        hintText: 'CVV',
+        hintText: LocaleKeys.addCard_CVV.locale,
         prefixIcon: const Padding(
           padding: EdgeInsets.symmetric(vertical: 10),
           child: Icon(Icons.security_outlined),
@@ -197,7 +207,7 @@ class FullName extends StatelessWidget {
           borderSide: BorderSide(color: projectColor.green),
         ),
         prefixIconColor: projectColor.green,
-        hintText: 'Full Name',
+        hintText: LocaleKeys.addCard_fullName.locale,
         prefixIcon: const Padding(
           padding: EdgeInsets.symmetric(vertical: 10),
           child: Icon(Icons.person_outline_outlined),
@@ -252,7 +262,7 @@ class CardName extends StatelessWidget {
         ),
         focusColor: projectColor.green,
         prefixIconColor: projectColor.green,
-        hintText: 'Card Name',
+        hintText: LocaleKeys.addCard_cardName.locale,
         prefixIcon: const Padding(
           padding: EdgeInsets.symmetric(vertical: 10),
           child: Icon(Icons.tag_outlined),
