@@ -19,7 +19,9 @@
     },
     "language":{
         "turkish":"Türkçe",
-        "english":"İngilizce"
+        "english":"İngilizce",
+        "italian":"İtalyanca",
+        "language":"Dil"
     }
 
 

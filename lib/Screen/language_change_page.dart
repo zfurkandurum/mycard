@@ -19,8 +19,9 @@ class _LanguageChangePageState extends State<LanguageChangePage> {
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
+          centerTitle: true,
           backgroundColor: projectColor.green,
-          title: const Text('Language'),
+          title: Text(LocaleKeys.language_language.locale),
         ),
         body: ListView(
           children: [
@@ -38,6 +39,13 @@ class _LanguageChangePageState extends State<LanguageChangePage> {
               languageName: LocaleKeys.language_english.locale,
               onTap: () {
                 context.locale = Constants.EN_LOCALE;
+              },
+            ),
+            LanguageWidget(
+              languageImage: 'ITFlag',
+              languageName: LocaleKeys.language_italian.locale,
+              onTap: () {
+                context.locale = Constants.IT_LOCALE;
               },
             ),
           ],

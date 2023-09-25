@@ -17,6 +17,8 @@ abstract class  LocaleKeys {
   static const general = 'general';
   static const language_turkish = 'language.turkish';
   static const language_english = 'language.english';
+  static const language_italian = 'language.italian';
+  static const language_language = 'language.language';
   static const language = 'language';
 
 }

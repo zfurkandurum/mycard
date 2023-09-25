@@ -15,11 +15,13 @@
     },
     "general":{
         "successSnackBar":"Completed!"
-        
+
     },
     "language":{
         "turkish":"Turkish",
-        "english":"English"
+        "english":"English",
+        "italian":"Italian",
+        "language":"Language"
     }
 
 

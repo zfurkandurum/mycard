@@ -1,0 +1,29 @@
+{
+    "drawer":{
+        "donate": "Donare",
+        "info":"Informazioni",
+        "fingerprint":"impronta digitale",
+        "language":"Lingua"
+    },
+    "addCard":{
+       "cardName":"Nome della carta",
+       "fullName":"Nome e cognome",
+       "CVV":"CVV",
+       "MMYY":"MM/AA",
+       "appBarText":"Nuova carta",
+       "addCardButton":"Aggiungi carta"
+    },
+    "general":{
+        "successSnackBar":"Completato!"
+
+    },
+    "language":{
+        "turkish":"Turca",
+        "english":"Inglese",
+        "italian":"Italiana",
+        "language":"Lingua"
+    }
+
+
+
+}
