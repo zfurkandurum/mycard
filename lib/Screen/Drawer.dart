@@ -28,7 +28,7 @@ class _DrawerWidgetState extends State<DrawerWidget> {
               color: projectColor.green,
             ),
             child: Text(
-              ProjectText().appName,
+              Constants().appName,
               style: const TextStyle(
                 color: Colors.white,
                 fontSize: 24,

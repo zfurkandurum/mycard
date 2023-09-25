@@ -15,5 +15,8 @@ abstract class  LocaleKeys {
   static const addCard = 'addCard';
   static const general_successSnackBar = 'general.successSnackBar';
   static const general = 'general';
+  static const language_turkish = 'language.turkish';
+  static const language_english = 'language.english';
+  static const language = 'language';
 
 }

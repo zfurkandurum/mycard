@@ -15,8 +15,13 @@
     },
     "general":{
         "successSnackBar":"Completed!"
-
+        
+    },
+    "language":{
+        "turkish":"Turkish",
+        "english":"English"
     }
+
 
 
 }

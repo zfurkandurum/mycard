@@ -11,9 +11,10 @@ Future<void> main() async {
   runApp(
     EasyLocalization(
       supportedLocales: const [
-        ProjectText.EN_LOCALE,
+        Constants.EN_LOCALE,
+        Constants.TR_LOCALE,
       ],
-      path: ProjectText.LANG_PATH,
+      path: Constants.LANG_PATH,
       child: const MainApp(),
     ),
   );

@@ -1,7 +1,17 @@
+// ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:flutter/material.dart';
 
 class LanguageWidget extends StatelessWidget {
-  const LanguageWidget({super.key});
+  final String languageImage;
+  final String languageName;
+  final VoidCallback onTap;
+
+  const LanguageWidget({
+    required this.languageImage,
+    required this.languageName,
+    required this.onTap,
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -9,19 +19,27 @@ class LanguageWidget extends StatelessWidget {
       height: 70,
       width: 200,
       child: InkWell(
-        onTap: () {},
-        child: const Card(
+        onTap: onTap,
+        child: Card(
           child: Column(
             children: [
               Row(
                 children: [
-                  CircleAvatar(
-                    backgroundImage: NetworkImage(
-                      'https://is4-ssl.mzstatic.com/image/thumb/Purple62/v4/5d/58/be/5d58be0b-5e88-55de-21f3-e11ec6c44b9a/source/512x512bb.jpg',
+                  SizedBox(
+                    height: 60,
+                    width: 60,
+                    child: Image(
+                      image: AssetImage('assets/png/$languageImage.png'),
                     ),
                   ),
-                  SizedBox(width: 10),
-                  Text('türkçe'),
+                  const SizedBox(width: 10),
+                  Text(
+                    languageName,
+                    style: const TextStyle(
+                      fontSize: 18,
+                      fontWeight: FontWeight.w500,
+                    ),
+                  ),
                 ],
               ),
             ],

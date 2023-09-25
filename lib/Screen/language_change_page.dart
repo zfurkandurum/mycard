@@ -1,5 +1,9 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:mycard/Utils/Utils.dart';
 import 'package:mycard/Utils/color.dart';
+import 'package:mycard/Utils/extension/string_extension.dart';
+import 'package:mycard/core/lang/locale_keys.g.dart';
 import 'package:mycard/widget/languageWidget.dart';
 
 class LanguageChangePage extends StatefulWidget {
@@ -18,11 +22,23 @@ class _LanguageChangePageState extends State<LanguageChangePage> {
           backgroundColor: projectColor.green,
           title: const Text('Language'),
         ),
-        body: ListView.builder(
-          itemCount: 2,
-          itemBuilder: (context, index) {
-            return const LanguageWidget();
-          },
+        body: ListView(
+          children: [
+            LanguageWidget(
+              languageImage: 'TRFlag',
+              languageName: LocaleKeys.language_turkish.locale,
+              onTap: () {
+                context.locale = Constants.TR_LOCALE;
+              },
+            ),
+            LanguageWidget(
+              languageImage: 'USFlag',
+              languageName: LocaleKeys.language_english.locale,
+              onTap: () {
+                context.locale = Constants.EN_LOCALE;
+              },
+            ),
+          ],
         ),
       ),
     );

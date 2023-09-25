@@ -16,6 +16,10 @@
     "general":{
         "successSnackBar":"Başarılı!"
 
+    },
+    "language":{
+        "turkish":"Türkçe",
+        "english":"İngilizce"
     }
 
 

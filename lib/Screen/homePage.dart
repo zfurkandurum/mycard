@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:hive/hive.dart';
 import 'package:mycard/Utils/color.dart';
 import 'package:mycard/Utils/constants.dart';
 import 'package:mycard/Screen/Drawer.dart';
@@ -25,7 +24,7 @@ class _homePageState extends State<homePage> {
       child: Scaffold(
         appBar: AppBar(
           backgroundColor: projectColor.green,
-          title: Center(child: Text(ProjectText().appName)),
+          title: Center(child: Text(Constants().appName)),
           actions: const [
             homePageAddIcon(),
           ],
