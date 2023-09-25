@@ -24,6 +24,7 @@ class _LanguageChangePageState extends State<LanguageChangePage> {
         ),
         body: ListView(
           children: [
+            const SizedBox(height: 4),
             LanguageWidget(
               languageImage: 'TRFlag',
               languageName: LocaleKeys.language_turkish.locale,
@@ -31,6 +32,7 @@ class _LanguageChangePageState extends State<LanguageChangePage> {
                 context.locale = Constants.TR_LOCALE;
               },
             ),
+            const SizedBox(height: 4),
             LanguageWidget(
               languageImage: 'USFlag',
               languageName: LocaleKeys.language_english.locale,

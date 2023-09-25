@@ -1,5 +1,6 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:flutter/material.dart';
+import 'package:mycard/Utils/Utils.dart';
 
 class LanguageWidget extends StatelessWidget {
   final String languageImage;
@@ -15,32 +16,33 @@ class LanguageWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      height: 70,
-      width: 200,
-      child: InkWell(
-        onTap: onTap,
-        child: Card(
-          child: Column(
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 5),
+      child: Container(
+        decoration: BoxDecoration(
+          border: Border.all(color: Colors.grey),
+          borderRadius: const BorderRadius.all(Radius.circular(10)),
+        ),
+        height: 70,
+        child: InkWell(
+          onTap: onTap,
+          child: Row(
             children: [
-              Row(
-                children: [
-                  SizedBox(
-                    height: 60,
-                    width: 60,
-                    child: Image(
-                      image: AssetImage('assets/png/$languageImage.png'),
-                    ),
-                  ),
-                  const SizedBox(width: 10),
-                  Text(
-                    languageName,
-                    style: const TextStyle(
-                      fontSize: 18,
-                      fontWeight: FontWeight.w500,
-                    ),
-                  ),
-                ],
+              const SizedBox(width: 5),
+              SizedBox(
+                height: 60,
+                width: 60,
+                child: Image(
+                  image: AssetImage('assets/png/$languageImage.png'),
+                ),
+              ),
+              const SizedBox(width: 115),
+              Text(
+                languageName,
+                style: const TextStyle(
+                  fontSize: 18,
+                  fontWeight: FontWeight.w500,
+                ),
               ),
             ],
           ),

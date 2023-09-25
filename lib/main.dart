@@ -10,10 +10,7 @@ Future<void> main() async {
   await EasyLocalization.ensureInitialized();
   runApp(
     EasyLocalization(
-      supportedLocales: const [
-        Constants.EN_LOCALE,
-        Constants.TR_LOCALE,
-      ],
+      supportedLocales: Constants.SUPPORTED_LOCALE,
       path: Constants.LANG_PATH,
       child: const MainApp(),
     ),
