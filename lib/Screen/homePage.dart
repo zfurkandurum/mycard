@@ -3,7 +3,7 @@ import 'package:mycard/Utils/color.dart';
 import 'package:mycard/Utils/constants.dart';
 import 'package:mycard/Screen/Drawer.dart';
 import 'package:mycard/Screen/addCard.dart';
-import 'package:mycard/widget/new_card_view.dart';
+import 'package:mycard/widget/home_card_widget.dart';
 
 class homePage extends StatefulWidget {
   const homePage({super.key});
@@ -32,7 +32,9 @@ class _homePageState extends State<homePage> {
         body: ListView.builder(
           itemCount: 3,
           itemBuilder: (context, index) {
-            return const NewCardView();
+            return const CardView(
+              cardName: 'card',
+            );
           },
         ),
         drawer: const DrawerWidget(),
@@ -51,7 +53,9 @@ class homeList extends StatelessWidget {
     return ListView.builder(
       itemBuilder: (context, index) {
         return ListTile(
-          title: const NewCardView(),
+          title: const CardView(
+            cardName: '',
+          ),
           onTap: () {},
         );
       },

@@ -41,6 +41,7 @@ class _LanguageChangePageState extends State<LanguageChangePage> {
                 context.locale = Constants.EN_LOCALE;
               },
             ),
+            const SizedBox(height: 4),
             LanguageWidget(
               languageImage: 'ITFlag',
               languageName: LocaleKeys.language_italian.locale,
